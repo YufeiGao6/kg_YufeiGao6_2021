@@ -20,12 +20,15 @@ def main():
     for i in range(len(s1)):
         a = s1[i]
         b = s2[i]
+        # if the character a is already mapped to a character in s2
         if a in mapping:
             # print "false" since the character a cannot map to two characters
             if mapping[a] != b:
                 print("false")
                 return False
+        # if the character a is not mapped to a character yet
         else:
+            # map a to b
             mapping[a] = b
     # print "true" since each character in s1 can be mapped to a character in s2
     print("true")
